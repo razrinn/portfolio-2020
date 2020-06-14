@@ -1,5 +1,5 @@
 import React from "react";
-import { Root, Container } from "./styles";
+import { Root, Container, EmailButton } from "./styles";
 import ProfileSection from "./section/ProfileSection";
 import WorkSection from "./section/WorkSection";
 
@@ -10,6 +10,9 @@ function IndexView() {
                 <ProfileSection />
                 <WorkSection />
             </Container>
+            <EmailButton href="mailto:rayazrin19@gmail.com">
+                Email Me
+            </EmailButton>
         </Root>
     );
 }

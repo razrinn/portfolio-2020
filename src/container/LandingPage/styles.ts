@@ -25,6 +25,10 @@ export const Container = styled.div`
     @media only screen and (max-width: 768px) {
         padding: 0 5%;
     }
+
+    @media only screen and (max-width: 1280px) {
+        padding: 0 10%;
+    }
 `;
 
 export const Spacer = styled.div``;
@@ -33,7 +37,6 @@ export const Box = styled.div`
     border-radius: 8px;
     box-shadow: -4px -4px 8px rgba(40, 40, 40, 0.5),
         4px 4px 8px rgba(0, 0, 0, 0.5);
-    min-height: 10vh;
     width: 100%;
     padding: 1.25rem 2.5rem;
     @media only screen and (max-width: 768px) {
@@ -77,4 +80,17 @@ export const TitleText = styled.h1`
 
 export const SubtitleText = styled.h2`
     width: 100%;
+`;
+
+export const EmailButton = styled.a`
+    text-decoration: none;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.5rem 2.5rem;
+    background-color: white;
+    color: ${primaryBlue};
+    font-family: "Open Sans";
+    font-weight: bold;
+    border-radius: 8px;
 `;

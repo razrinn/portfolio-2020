@@ -1,44 +1,73 @@
 import React from "react";
-import { WorkContainer, Wrapper, WorksWrapper } from "./styles";
+import {
+    WorkContainer,
+    Wrapper,
+    WorksWrapper,
+    WorkDescriptionWrapper,
+    WorkItem,
+    WorkImage,
+    WorkTitle,
+    WorkDescriptionTitle,
+    WorkDescriptionText,
+    PaginationWrapper,
+    Pagination,
+} from "./styles";
 import { SubtitleText } from "../../styles";
+import { PORTFOLIOS } from "../../../../hooks/dummy";
 function WorkSection() {
+    const [active, setActive] = React.useState(10);
+    const [page, setPage] = React.useState(0);
+    const data = PORTFOLIOS;
+    const handleClickPrev = () => {
+        setActive(data[(page - 1) * 4].id);
+        setPage(page - 1);
+    };
+    const handleClickNext = () => {
+        setActive(data[(page + 1) * 4].id);
+
+        setPage(page + 1);
+    };
     return (
         <WorkContainer>
             <SubtitleText>MY WORKS</SubtitleText>
             <Wrapper>
                 <WorksWrapper>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
-                    <div style={{ marginRight: "2rem" }}>asdsa</div>
+                    <Wrapper>
+                        {data
+                            .slice(4 * page, 4 * page + 4)
+                            .map(({ id, title, image }, i) => (
+                                <WorkItem
+                                    key={id}
+                                    onClick={(e) => setActive(id)}
+                                >
+                                    <WorkImage src={image} />
+                                    <WorkTitle>{title}</WorkTitle>
+                                </WorkItem>
+                            ))}
+                    </Wrapper>
+                    <PaginationWrapper>
+                        <Pagination
+                            onClick={handleClickPrev}
+                            disabled={page === 0}
+                        >
+                            Previous
+                        </Pagination>
+                        <Pagination
+                            onClick={handleClickNext}
+                            disabled={page === Math.floor(data.length / 4)}
+                        >
+                            Next
+                        </Pagination>
+                    </PaginationWrapper>
                 </WorksWrapper>
-                <div>
-                    <div>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing
-                        elit. Ipsa consectetur aliquid ad eum vitae neque sunt
-                        architecto dolore exercitationem sint praesentium
-                        accusamus amet animi officiis voluptate, officia non
-                        odio sed, excepturi dolores laborum qui maiores
-                        recusandae accusantium! Quis impedit a officia rem nihil
-                        iure culpa voluptates perferendis nam itaque vero
-                        recusandae sint aspernatur mollitia expedita deleniti,
-                        odio asperiores dolores laudantium iste. Consectetur,
-                        minus odio possimus unde veritatis maiores culpa omnis,
-                        doloremque laudantium cupiditate dolor atque dolores
-                        corrupti, magni explicabo. Voluptate vitae perferendis
-                        aliquam architecto voluptates, odit rerum, voluptas ex
-                        quaerat alias totam pariatur hic praesentium neque
-                        cupiditate minus illum libero.
-                    </div>
-                </div>
+                <WorkDescriptionWrapper>
+                    <WorkDescriptionTitle>
+                        {data.find((x) => x.id === active)?.title}
+                    </WorkDescriptionTitle>
+                    <WorkDescriptionText>
+                        {data.find((x) => x.id === active)?.description}
+                    </WorkDescriptionText>
+                </WorkDescriptionWrapper>
             </Wrapper>
         </WorkContainer>
     );
