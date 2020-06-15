@@ -3,7 +3,6 @@ import { Root, Container, EmailButton } from "./styles";
 import ProfileSection from "./section/ProfileSection";
 import WorkSection from "./section/WorkSection";
 import Mail from "../../media/mail.svg";
-import { SocialIcon } from "./section/ProfileSection/styles";
 
 function IndexView() {
     return (
