@@ -101,4 +101,23 @@ export const EmailButton = styled.a`
     font-family: "Open Sans";
     font-weight: bold;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    > span {
+        margin-right: 0.5em;
+    }
+    > img {
+        width: 1em;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 1rem;
+        border-radius: 50%;
+        > span {
+            display: none;
+        }
+        > img {
+            width: 2em;
+        }
+    }
 `;

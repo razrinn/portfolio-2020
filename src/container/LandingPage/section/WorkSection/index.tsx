@@ -12,7 +12,7 @@ import {
     PaginationWrapper,
     Pagination,
 } from "./styles";
-import { SubtitleText } from "../../styles";
+import { SubtitleText, Link } from "../../styles";
 import { PORTFOLIOS } from "../../../../hooks/dummy";
 function WorkSection() {
     const [active, setActive] = React.useState(10);
@@ -30,7 +30,7 @@ function WorkSection() {
     return (
         <WorkContainer>
             <SubtitleText>MY WORKS</SubtitleText>
-            <Wrapper>
+            <Wrapper className="container">
                 <WorksWrapper>
                     <Wrapper>
                         {data
@@ -39,6 +39,7 @@ function WorkSection() {
                                 <WorkItem
                                     key={id}
                                     onClick={(e) => setActive(id)}
+                                    className={active === id ? "active" : ""}
                                 >
                                     <WorkImage src={image} />
                                     <WorkTitle>{title}</WorkTitle>
@@ -67,6 +68,14 @@ function WorkSection() {
                     <WorkDescriptionText>
                         {data.find((x) => x.id === active)?.description}
                     </WorkDescriptionText>
+                    {!data.find((x) => x.id === active)?.isPrivate ? (
+                        <Link
+                            href={data.find((x) => x.id === active)?.url}
+                            target="_blank"
+                        >
+                            Visit Website
+                        </Link>
+                    ) : null}
                 </WorkDescriptionWrapper>
             </Wrapper>
         </WorkContainer>
