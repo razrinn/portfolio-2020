@@ -13,16 +13,30 @@ export const Wrapper = styled.div`
     flex-wrap: wrap;
     width: 100%;
     justify-content: space-evenly;
+
+    &.container {
+        @media only screen and (max-width: 768px) {
+            flex-direction: column-reverse;
+            align-items: center;
+        }
+    }
 `;
 
 export const WorksWrapper = styled.div`
     flex: 2 2 0;
     width: 66.666666%;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+    }
 `;
 
 export const WorkDescriptionWrapper = styled.div`
     flex: 1 1 0;
     width: 33.333333%;
+    @media only screen and (max-width: 768px) {
+        width: 100%;
+        text-align: center;
+    }
 `;
 export const WorkItem = styled.div`
     flex: 0 0 40%;
@@ -33,10 +47,31 @@ export const WorkItem = styled.div`
         4px 4px 8px rgba(0, 0, 0, 0.5);
     padding: 0.25rem 0.5rem;
     margin: 0.625rem;
+    cursor: pointer;
+    transition: box-shadow 0.275s ease;
     @media only screen and (max-width: 768px) {
         padding: 0.25 0.5rem;
+        max-width: 35%;
+        flex: 0 0 35%;
     }
-    cursor: pointer;
+
+    &.active {
+        box-shadow: inset -4px -4px 8px rgba(40, 40, 40, 0.5),
+            inset 4px 4px 8px rgba(0, 0, 0, 0.5);
+        > img,
+        p {
+            transform: scale(0.95);
+        }
+    }
+
+    &:hover {
+        box-shadow: inset -4px -4px 8px rgba(40, 40, 40, 0.5),
+            inset 4px 4px 8px rgba(0, 0, 0, 0.5);
+        > img,
+        p {
+            transform: scale(0.95);
+        }
+    }
 `;
 
 export const WorkImage = styled.img`
@@ -45,6 +80,9 @@ export const WorkImage = styled.img`
 
 export const WorkTitle = styled.p`
     text-align: center;
+    @media only screen and (max-width: 768px) {
+        font-size: 0.75rem;
+    }
 `;
 
 export const WorkDescriptionTitle = styled.p`

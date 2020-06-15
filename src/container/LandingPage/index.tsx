@@ -2,6 +2,8 @@ import React from "react";
 import { Root, Container, EmailButton } from "./styles";
 import ProfileSection from "./section/ProfileSection";
 import WorkSection from "./section/WorkSection";
+import Mail from "../../media/mail.svg";
+import { SocialIcon } from "./section/ProfileSection/styles";
 
 function IndexView() {
     return (
@@ -11,7 +13,7 @@ function IndexView() {
                 <WorkSection />
             </Container>
             <EmailButton href="mailto:rayazrin19@gmail.com">
-                Email Me
+                <span>Email Me</span> <img src={Mail} alt="mail" />
             </EmailButton>
         </Root>
     );

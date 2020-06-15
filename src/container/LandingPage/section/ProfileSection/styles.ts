@@ -8,3 +8,7 @@ export const ProfileContainer = styled.div`
     flex-direction: column;
     width: 100%;
 `;
+
+export const SocialIcon = styled.img`
+    width: 0.75em;
+`;

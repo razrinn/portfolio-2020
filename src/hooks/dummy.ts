@@ -6,14 +6,16 @@ export const PORTFOLIOS = [
             "Developed Indonesia's Coronavirus Status front-end. Built using ReactJS",
         url: "https://crona.razrinn.com",
         image: "https://i.ibb.co/GWmrqTK/crona.png",
+        isPrivate: false,
     },
     {
         id: 1,
         title: "Haer",
         description:
-            "Currently developing Human Resource Management System platform's front-end. Built using ReactJS",
+            "Developen Human Resource Management System platform's front-end. Built using ReactJS",
         url: "https://haer.co.id",
         image: "https://i.ibb.co/HYTg1VT/haer.png",
+        isPrivate: false,
     },
     {
         id: 2,
@@ -22,6 +24,7 @@ export const PORTFOLIOS = [
             "Developed website front-end consist of company profile, blog, and board member page. Built using Django",
         url: "https://tokopedia-ai.cs.ui.ac.id",
         image: "https://i.ibb.co/xshHgJZ/tokpedai.png",
+        isPrivate: false,
     },
     {
         id: 3,
@@ -30,14 +33,16 @@ export const PORTFOLIOS = [
             "Developed Risk Analytics platform's, both its back-end and front-end. Built using Laravel and MySQL",
         url: "",
         image: "https://i.ibb.co/3r0KvyM/bpkp.png",
+        isPrivate: true,
     },
     {
         id: 4,
-        title: "Personal Website",
+        title: "Personal Website v2",
         description:
-            "Developed this website from scratch. Built using Figma for design, ReactJS for front-end, and Django for back-end",
+            "Developed my former portfolio website from scratch. Built using Figma for design, ReactJS for front-end, and Django for back-end",
         url: "https://razrinn.tech",
         image: "https://i.ibb.co/StCnv0z/thisweb.png",
+        isPrivate: false,
     },
     {
         id: 5,
@@ -46,6 +51,7 @@ export const PORTFOLIOS = [
             "Designed and developed whole website front-end consist of landing, register, profile, and marketplace. Built using Django",
         url: "https://penni.id",
         image: "https://i.ibb.co/MphCS2V/penni.png",
+        isPrivate: false,
     },
     {
         id: 6,
@@ -54,6 +60,7 @@ export const PORTFOLIOS = [
             "Developed website both its front-end and back-end. Built using Laravel, MySQL, and Wordpress",
         url: "https://bem.fk.ui.ac.id",
         image: "https://i.ibb.co/wKTsVQ3/bemfk.png",
+        isPrivate: false,
     },
     {
         id: 7,
@@ -62,6 +69,7 @@ export const PORTFOLIOS = [
             "Recreated and developed whole website front-end. Built using Laravel",
         url: "http://rumkitbhayangkaralemdiklatpolri.com",
         image: "https://i.ibb.co/2tF7sd4/rslemdiklat.png",
+        isPrivate: false,
     },
     {
         id: 8,
@@ -70,6 +78,7 @@ export const PORTFOLIOS = [
             "Develop website front-end consist of profile, article, research, gallery, and FAQ. Build using Laravel",
         url: "http://dts-indonesia.com",
         image: "https://i.ibb.co/yNCtM9C/dts.png",
+        isPrivate: false,
     },
     {
         id: 9,
@@ -79,5 +88,6 @@ export const PORTFOLIOS = [
         url:
             "https://dailysocial.id/longform/kecerdasan-buatan-menuju-pilar-ekonomi-indonesia",
         image: "https://i.ibb.co/L9ZP8Lc/dailysocial.png",
+        isPrivate: false,
     },
 ];

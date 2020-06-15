@@ -41,6 +41,7 @@ export const Box = styled.div`
     padding: 1.25rem 2.5rem;
     @media only screen and (max-width: 768px) {
         padding: 0.625 1.25rem;
+        width: 85%;
     }
 `;
 
@@ -76,10 +77,17 @@ export const TitleText = styled.h1`
     width: 100%;
     font-weight: bold;
     font-size: 4rem;
+
+    @media only screen and (max-width: 768px) {
+        font-size: 2.5rem;
+    }
 `;
 
 export const SubtitleText = styled.h2`
     width: 100%;
+    @media only screen and (max-width: 768px) {
+        font-size: 1.25rem;
+    }
 `;
 
 export const EmailButton = styled.a`
@@ -93,4 +101,23 @@ export const EmailButton = styled.a`
     font-family: "Open Sans";
     font-weight: bold;
     border-radius: 8px;
+    display: flex;
+    align-items: center;
+    > span {
+        margin-right: 0.5em;
+    }
+    > img {
+        width: 1em;
+    }
+
+    @media only screen and (max-width: 768px) {
+        padding: 1rem;
+        border-radius: 50%;
+        > span {
+            display: none;
+        }
+        > img {
+            width: 2em;
+        }
+    }
 `;
