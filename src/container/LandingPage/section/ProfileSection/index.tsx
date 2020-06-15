@@ -14,21 +14,21 @@ function ProfileSection() {
                 <SubtitleText>Jakarta, Indonesia.</SubtitleText>
                 <SubtitleText>
                     <Link
-                        href="http://"
+                        href="https://github.com/razrinn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <SocialIcon src={Github} alt="github" /> Github.{" "}
                     </Link>
                     <Link
-                        href="http://"
+                        href="https://twitter.com/razrinn"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
                         <SocialIcon src={Twitter} alt="twitter" /> Twitter.{" "}
                     </Link>
                     <Link
-                        href="http://"
+                        href="https://www.instagram.com/razrinn/"
                         target="_blank"
                         rel="noopener noreferrer"
                     >
